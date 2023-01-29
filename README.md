@@ -72,3 +72,18 @@ android.enableJetifier=true
 
     </com.atikulsoftware.fundrawer.FunDrawer>
 ```
+
+> Fun Drawer Find
+```
+FunDrawer funDrawer = findViewById(R.id.drawerlayout);
+```
+
+> Open Drawer
+```
+funDrawer.openMenu(true);
+```
+
+> Close Drawer
+```
+funDrawer.closeMenu(true);
+```
