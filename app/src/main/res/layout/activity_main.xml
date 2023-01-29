@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.atikulsoftware.fundrawer.FunDrawer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    app:edMenuBackground="#dddddd"
+    app:edMenuSize="260dp"
+    app:edPosition="1"
+    tools:context=".MainActivity">
+
+    <!--content-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:edMenuBackground="@android:color/white"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:id="@+id/toolbar"
+            android:background="#2196F3"
+            android:elevation="5dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <ImageView
+                    android:id="@+id/btn_menu"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_menu"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_toEndOf="@id/btn_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="19sp"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
+                    />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </RelativeLayout>
+
+    <!--menu-->
+    <com.atikulsoftware.fundrawer.FunMenuLayout
+        android:id="@+id/menulayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    layout="@layout/fun_drawer_header"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/body_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    layout="@layout/fun_drawer_body"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </com.atikulsoftware.fundrawer.FunMenuLayout>
+
+</com.atikulsoftware.fundrawer.FunDrawer>
